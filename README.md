@@ -1,4 +1,7 @@
 # ChatRealTimePHP
+
+### Sử dụng: PHP, MySQL, Ajax
+
 ### Giao diện
 
 ![alt text](screenshots/sc1.png)
