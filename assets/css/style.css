@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #2764F1;
+    --primary-color-hover: #0044e2;
+    --green-color: #0DBB42;
+}
+
+body {
+    background-color: #F7F5F7;
+}
+
+a {
+    color: var(--primary-color-hover);
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+.form-control, button {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+#error-message {
+    display: none;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-color-hover);
+    border-color: var(--primary-color-hover);
+}
+
+.wrapper {
+    min-height: 100vh;
+}
+
+.box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    -webkit-box-shadow: 0px 12px 21px -13px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 12px 21px -13px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 12px 21px -13px rgba(0, 0, 0, 0.75);
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.info-user {
+    display: flex;
+    align-items: center;
+}
+
+.info-user-text {
+    margin-left: 8px;
+}
+
+.info-user p {
+    position: relative;
+    margin-bottom: 0;
+}
+
+.active-icon {
+    font-size: .5rem;
+    color: var(--green-color);
+    position: absolute;
+    width: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.active-icon.disable {
+    color: #ccc;
+}
+
+.info-user p span {
+    margin-left: 12px;
+}
+
+.list-chat {
+    list-style: none;
+    max-height: 250px;
+    overflow-y: scroll;
+}
+
+.list-chat--link {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    position: relative;
+    border-radius: 5px;
+    transition: all .1s;
+}
+
+.list-chat--link:hover {
+    background-color: #e6e6e6;
+}
+
+.detail-chat {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.detail-chat--name {
+    margin-bottom: 0;
+    color: #333;
+}
+
+.detail-chat--inbox {
+    margin-bottom: 0;
+    color: #666;
+}
+
+.list-chat--link .active-icon {
+    right: 15px;
+    font-size: 1rem;
+}
+
+/* 
+========================================================
+                CHAT VIEW LAYOUT
+========================================================
+*/
+
+.btn-back {
+    font-size: 1.5rem;
+    margin-right: 4px;
+    color: #333;
+}
+
+.chat-view--list {
+    background-color: #f3f3f3;
+    height: 50vh;
+}
+
+.chat-view--list {
+    list-style: none;
+    overflow-y: scroll;
+}
+
+.chat-item--server {
+    text-align: left;
+}
+
+.chat-item--client {
+    text-align: right;
+}
+
+.message {
+    display: inline-block;
+    padding: 6px 15px;
+    border-radius: 15px;
+    max-width: 350px;
+    margin-left: 10px;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.message--server {
+    color: #333;
+    background-color: #fff;
+    border-bottom-left-radius: 0;
+}
+
+.message--client {
+    color: #fff;
+    background-color: var(--primary-color);
+    border-bottom-right-radius: 0;
+}
+
+#chat-input {
+    border-radius: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    font-size: 1.2rem;
+    border-color: #ccc !important;
+}
+
+#btn-send {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    font-size: 1.2rem;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* 
+==========================================================
+                CUSTOM SCROLLBAR
+==========================================================
+*/
+
+.list-chat::-webkit-scrollbar, .chat-view--list::-webkit-scrollbar {
+    width: 5px;
+    height: 4px;
+}
+
+.list-chat::-webkit-scrollbar-track, .chat-view--list::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 0;
+}
+
+.list-chat::-webkit-scrollbar-thumb, .chat-view--list::-webkit-scrollbar-thumb {
+    background: rgba(7, 7, 7, 0.15);
+    border-radius: 20px;
+}
+
+.list-chat::-webkit-scrollbar-thumb:hover, .chat-view--list::-webkit-scrollbar-thumb:hover {
+    background: rgba(7, 7, 7, 0.226);
+}
